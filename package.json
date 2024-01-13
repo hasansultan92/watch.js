@@ -1,0 +1,27 @@
+{
+  "name": "wat4hjs",
+  "version": "1.0.0",
+  "description": "Native file system events",
+  "main": "js/init.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "main": "echo \"Running wrapper.js\" && node js/wrapper.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hasansultan92/watch.js.git"
+  },
+  "author": "Hasan Sultan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hasansultan92/watch.js/issues"
+  },
+  "homepage": "https://github.com/hasansultan92/watch.js#readme",
+  "dependencies": {
+    "ffi-napi": "^4.0.3"
+  },
+  "gypfile": true
+}
