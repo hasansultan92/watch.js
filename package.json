@@ -1,8 +1,13 @@
 {
   "name": "wat4hjs",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Native file system events",
   "main": "js/init.js",
+  "files": [
+    "build",
+    "js/definitions.js",
+    "js/generalFuncs.js"
+  ],
   "directories": {
     "test": "tests"
   },
