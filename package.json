@@ -1,6 +1,6 @@
 {
   "name": "wat4hjs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Native file system events",
   "main": "js/init.js",
   "files": [
