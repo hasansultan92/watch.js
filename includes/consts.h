@@ -40,6 +40,6 @@ typedef struct EventEmitter
     FSEventStreamRef fsEventStream;
 } EventEmitter;
 
-EventEmitter *EventEmitter_new(const char *directory);
-void EventEmitter_addObserver(EventEmitter *emitter, EventObserverCallback callback);
-void EventEmitter_startMonitoring(EventEmitter *emitter);
+EventEmitter *init(const char *directory);
+void observer(EventEmitter *emitter, EventObserverCallback callback);
+void monitor(EventEmitter *emitter);

@@ -57,7 +57,7 @@ void handleFSEvent(
     }
 }
 
-EventEmitter *EventEmitter_new(const char *directory)
+EventEmitter *init(const char *directory)
 {
     EventEmitter *emitter = (EventEmitter *)malloc(sizeof(EventEmitter));
     strncpy(emitter->directory, directory, sizeof(emitter->directory) - 1);
@@ -82,7 +82,7 @@ EventEmitter *EventEmitter_new(const char *directory)
     return emitter;
 }
 
-void EventEmitter_addObserver(EventEmitter *emitter, EventObserverCallback callback)
+void observer(EventEmitter *emitter, EventObserverCallback callback)
 {
     EventObserver *newObserver = (EventObserver *)malloc(sizeof(EventObserver));
     newObserver->callback = callback;
@@ -90,7 +90,7 @@ void EventEmitter_addObserver(EventEmitter *emitter, EventObserverCallback callb
     emitter->observers = newObserver;
 }
 
-void EventEmitter_startMonitoring(EventEmitter *emitter)
+void monitor(EventEmitter *emitter)
 {
     FSEventStreamScheduleWithRunLoop(emitter->fsEventStream, CFRunLoopGetCurrent(), kCFRunLoopDefaultMode);
     FSEventStreamStart(emitter->fsEventStream);
